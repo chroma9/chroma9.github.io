@@ -1,15 +1,15 @@
 <head>
 <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-
+{% if page.title %}
+{% assign posting = page.content | strip_html | truncatewords: 50 %}
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-{% if page.description %}
-<meta name="description" content="{{ page.description }}">
+<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ posting }}{% endif %}">
 <meta name="theme-color" content="#{{ site.color }}">
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{ page.title }}">
-<meta property="og:description" content="{{ page.description }}">
+<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ posting }}{% endif %}">
 <meta property="og:url" content="{{ site.url}}{{ page.url }}">
 <meta property="og:image" content="{% if page.image %}{{ page.image }}{% else %}{{ site.image }}{% endif %}">
 
@@ -19,6 +19,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&display=swap">
 <link rel="stylesheet" href="/assets/css/{{ site.style }}.min.css">
 {% else %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="{{ site.description }}">
 <meta name="theme-color" content="#{{ site.color }}">
 <meta property="og:site_name" content="{{ site.title }}">
