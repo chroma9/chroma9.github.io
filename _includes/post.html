@@ -1,0 +1,53 @@
+<div class="wrap" id="gap">
+    <div class="left-frame">
+        <div>
+            <div class="panel-3">03<span class="hop">-111968</span></div>
+            <div class="panel-4">04<span class="hop">-041969</span></div>
+            <div class="panel-5">05<span class="hop">-1701D</span></div>
+            <div class="panel-6">06<span class="hop">-071984</span></div>
+            <div class="panel-7">07<span class="hop">-081940</span></div>
+            <div class="panel-8">08<span class="hop">-47148</span></div>
+            <div class="panel-9">09<span class="hop">-081966</span></div>
+        </div>
+        <div>
+            <div class="panel-10">10<span class="hop">-31</span></div>
+        </div>
+    </div>
+    <div class="right-frame">
+        <div class="bar-panel">
+            <div class="bar-6"></div>
+            <div class="bar-7"></div>
+            <div class="bar-8"></div>
+            <div class="bar-9"></div>
+            <div class="bar-10"></div>
+        </div>
+        <div class="corner-bg">
+            <div class="corner"></div>
+        </div>
+        <div class="content">
+            <h1>{{ page.title }}</h1>
+            <p class="postmeta">
+                <span id="stardate"></span>
+                <span> &bull; </span>
+                <span id="timestamp">{{ page.date | date: '%B %-d, %Y' }}</span>
+                <script>renderStardate('#timestamp','#stardate');</script>
+            </p>
+            <img class="pics border" src="{{ page.image }}">
+            {{ content }}
+            <div class="buttons">
+                {% if page.previous %}
+                    <a id="previous-post" href="{{ page.previous.url }}">
+                        <span>&larr; Previous Post</span>
+                    </a>
+                {% endif %}
+                {% if page.next %}
+                    <a id="next-post" href="{{ page.next.url }}">
+                        <span>Next Post &rarr;</span>
+                    </a>
+                {% endif %}
+            </div>
+            {% include footer.html %}
+        </div>
+    </div>
+    <script src="/assets/js/lcars.min.js"></script>
+</div>

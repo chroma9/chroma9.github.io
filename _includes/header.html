@@ -1,0 +1,39 @@
+<div id="header-wrap" class="wrap">
+    <div class="scroll-top">
+        <a id="scroll-top" href=""><span class="hop">screen</span> top</a>
+    </div>
+    <div class="left-frame-top">
+        <div class="panel-1"><a href="/">HOME</a></div>
+        <div class="panel-2">
+            <span>{{ site.time | date: '%H%M' }}</span>
+            <span id="version" class="hop">-{{ site.time | date: '%y%m%d' }}</span>
+        </div>
+    </div>
+    <div class="right-frame-top">
+        <!-- <div class="banner">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</div> -->
+        <div class="banner">{{ site.title }}</div>
+        <div class="data-cascade-button-group">
+            <div class="cascade-wrapper">
+                <div class="data-cascade">
+                    <div class="row-1"></div>
+                    <div class="row-2"></div>
+                    <div class="row-3"></div>
+                    <div class="row-4"></div>
+                    <div class="row-5"></div>
+                    <div class="row-6"></div>
+                </div>
+            </div>
+            {% include navigation.html %}
+        </div>
+        <div class="top-corner-bg">
+            <div class="top-corner"></div>
+        </div>
+        <div class="bar-panel">
+            <div class="bar-1"></div>
+            <div class="bar-2"></div>
+            <div class="bar-3"></div>
+            <div class="bar-4"></div>
+            <div class="bar-5"></div>
+        </div>
+    </div>
+</div>
