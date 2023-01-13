@@ -1,3 +1,9 @@
-title: The U.S.S. Nova Scotia
+title: The U.S.S. Anubis
 description: The Captain's Log of Cpt. Keith R. Ashton.
-style: lower-decks
+image: /assets/social.jpg
+color: 2c2c2c
+style: nemesis-blue
+
+collections:
+  sto_news:
+    output: true

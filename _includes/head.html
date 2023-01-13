@@ -22,7 +22,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="shortcut icon" href="{{ site.favicon }}">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&display=swap">
-<link rel="stylesheet" href="/assets/css/{{ site.style }}.min.css">
 {% else %}
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,6 +43,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="shortcut icon" href="{{ site.favicon }}">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&display=swap">
+{% endif %}
+{% if page.style %}
+<link rel="stylesheet" href="/assets/css/{{ page.style }}.min.css">
+{% else %}
 <link rel="stylesheet" href="/assets/css/{{ site.style }}.min.css">
 {% endif %}
 
