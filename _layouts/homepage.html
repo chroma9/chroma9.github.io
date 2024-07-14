@@ -3,10 +3,21 @@
 {% include head.html %}
 
 <body class="bg-black text-white text-center font-play">
-    <h1>Hi there. I'm Chroma9.</h1>
-    <img id="logo" class="logo" src="{{ site.url }}/assets/images/logo.png">
-    <p>This website isn't actually working yet. I've mostly been goofing around with it.</p>
-    <p>Wanna see something cool? Click my logo.</p>
+    <div id="banner-area">
+        <h1>Hi there. I'm Chroma9.</h1>
+        <img id="logo" class="logo" src="{{ site.url }}/assets/images/logo.png">
+        <p>This website isn't actually working yet. I've mostly been goofing around with it.</p>
+        <p>Wanna see something cool? Click my logo.</p>
+    </div>
+    <div id="recent-things">
+        <h2>Some recent things I've done...</h2>
+        <a href="{{ site.url }}/discord-profiles/">
+            <div class="recent-thing">
+                <h3>Discord Profile HTML Generator</h3>
+                <p>Generate HTML code to show off your Discord profile on your website or compatible webapp!</p>
+            </div>
+        </a>
+    </div>
 </body>
 <script src="{{ site.url }}/assets/js/chroma9.min.js"></script>
 </html>
